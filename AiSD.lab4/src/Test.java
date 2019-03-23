@@ -17,7 +17,7 @@ public class Test<T> {
         int sum = 0;
 
         for (int i = 0; i < a.length; i++) {
-            sum += Objects.requireNonNull(a[i], "Cannot be null");
+            sum += a[i];
         }
         return sum;
     }
