@@ -10,7 +10,7 @@ public class Test<T> {
     }
 
     public void test(T o) {
-            list.add(Objects.requireNonNull(o));
+        list.add(Objects.requireNonNull(o));
     }
 
     public int sum(int... a) {
