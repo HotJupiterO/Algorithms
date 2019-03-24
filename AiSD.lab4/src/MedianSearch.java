@@ -1,25 +1,26 @@
+import java.lang.reflect.Field;
 import java.util.*;
 
-public class BinarySearch {
-    List<Integer> averageList, leftList, rightList;
+public class MedianSearch {
+    private List<Integer> firstList, averageList, leftList, rightList;
 
-    BinarySearch() {
+    MedianSearch() {
         averageList = new ArrayList<>();
         leftList = new ArrayList<>();
         rightList = new ArrayList<>();
     }
 
-    public void splitList(List<Integer> list) {
+    public void splitList(List<Integer> list, int index) {
         Random random = new Random();
-        int index = random.nextInt(15);
-        int splitter = list.get(index);
-        for (int i = 0; i < list.size(); i++) {
-            if (list.get(i) == splitter) {
-                averageList.add(list.get(i));
-            } else if (list.get(i) < splitter) {
-                leftList.add(list.get(i));
-            } else if (list.get(i) > splitter) {
-                rightList.add(list.get(i));
+        this.firstList = list;
+        int splitter = this.firstList.get(index);
+        for (int i = 0; i < this.firstList.size(); i++) {
+            if (this.firstList.get(i) == splitter) {
+                averageList.add(firstList.get(i));
+            } else if (firstList.get(i) < splitter) {
+                leftList.add(firstList.get(i));
+            } else if (firstList.get(i) > splitter) {
+                rightList.add(firstList.get(i));
             }
         }
         System.out.println("Splitter = " + splitter);
@@ -36,15 +37,14 @@ public class BinarySearch {
         System.out.println();
     }
 
-    public List<Integer> generateList(int size, int max) {
-        List<Integer> generatedList = new ArrayList<>(size);
+    public void generateList(int size, int max) {
+        firstList = new ArrayList<>(size);
         for (int i = 0; i < size; i++) {
             Random random = new Random();
-            generatedList.add(random.nextInt(max));
+            firstList.add(random.nextInt(max));
         }
         System.out.println("Generated List:");
-        printList(generatedList);
-        return generatedList;
+        printList(firstList);
     }
 
     public Integer getElement(int k) {
@@ -59,6 +59,21 @@ public class BinarySearch {
         }
         return null;
     }
-//
+
+    public List<Integer> getFirstList() {
+        return firstList;
+    }
+
+    public List<Integer> getAverageList() {
+        return averageList;
+    }
+
+    public List<Integer> getLeftList() {
+        return leftList;
+    }
+
+    public List<Integer> getRightList() {
+        return rightList;
+    }
 
 }
