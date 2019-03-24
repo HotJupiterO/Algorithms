@@ -52,7 +52,7 @@ public class BinarySearch {
         Collections.sort(rightList);
         if (k < leftList.size()) {
             return Objects.requireNonNull(leftList.get(k));
-        } else if (k >= leftList.size() && k <= leftList.size() + averageList.size()) {
+        } else if (k <= leftList.size() + averageList.size()) {
             return Objects.requireNonNull(averageList.get(0));
         } else if (k > leftList.size() + averageList.size()) {
             return Objects.requireNonNull(rightList.get(k - leftList.size() - averageList.size()));
