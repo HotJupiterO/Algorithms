@@ -29,12 +29,16 @@ class MedianSearchTest {
     @Test
     void splitListTest() {
         medianSearch.splitList(myList,0);
-        assertEquals(2, medianSearch.getLeftList().get(3));
-
+        medianSearch.sortLists();
+        Integer actual = medianSearch.getLeftList().get(3);
+        assertEquals(2, actual);
     }
 
 
     @Test
     void getElementTest() {
+        medianSearch.splitList(myList,0);
+        medianSearch.sortLists();
+        assertEquals(8, medianSearch.getElement(6));
     }
 }

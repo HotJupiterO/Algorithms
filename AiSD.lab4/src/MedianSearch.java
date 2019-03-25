@@ -25,9 +25,9 @@ public class MedianSearch {
         }
         System.out.println("Splitter = " + splitter);
 
-        printList(leftList);
+        /*printList(leftList);
         printList(averageList);
-        printList(rightList);
+        printList(rightList);*/
     }
 
     public void printList(List<Integer> list) {
@@ -47,9 +47,13 @@ public class MedianSearch {
         printList(firstList);
     }
 
-    public Integer getElement(int k) {
+    public void sortLists(){
         Collections.sort(leftList);
         Collections.sort(rightList);
+    }
+
+    public Integer getElement(int k) {
+        sortLists();
         if (k < leftList.size()) {
             return Objects.requireNonNull(leftList.get(k));
         } else if (k <= leftList.size() + averageList.size()) {
