@@ -1,3 +1,4 @@
+import java.lang.reflect.Field;
 import java.util.*;
 
 public class MedianSearch {
@@ -12,7 +13,7 @@ public class MedianSearch {
     public void splitList(List<Integer> list, int index) {
         Random random = new Random();
         this.firstList = list;
-        int splitter = this.firstList.get(random.nextInt(list.size() - 1));
+        int splitter = this.firstList.get(index);
         for (int i = 0; i < this.firstList.size(); i++) {
             if (this.firstList.get(i) == splitter) {
                 averageList.add(firstList.get(i));
@@ -46,13 +47,13 @@ public class MedianSearch {
         printList(firstList);
     }
 
-    /*public void sortLists() {
+    public void sortLists(){
         Collections.sort(leftList);
         Collections.sort(rightList);
-    }*/
+    }
 
     public Integer getElement(int k) {
-//        sortLists();
+        sortLists();
         if (k < leftList.size()) {
             return Objects.requireNonNull(leftList.get(k));
         } else if (k <= leftList.size() + averageList.size()) {
