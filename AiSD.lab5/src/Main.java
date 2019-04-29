@@ -30,7 +30,6 @@ public class Main {
 
         Scanner sc = new Scanner(System.in);
         int option1 = sc.nextInt();
-        sortingMethods[option1]
         System.out.println("Which type of arrays?");
         System.out.println("1.Random\n2.Sorted in half\n3.Sorted\n4.Reverse Sorting");
 //        subOption1 = sc.nextInt();
