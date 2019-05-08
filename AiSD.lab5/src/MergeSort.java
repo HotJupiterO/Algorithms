@@ -2,7 +2,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.Random;
 
-public class MergeSort extends Sort{
+public class MergeSort extends SortingAlgorithm {
     public static void sort(int[] array, int n) {
         if (n < 2) {
             return;
@@ -66,10 +66,10 @@ public class MergeSort extends Sort{
                 primitiveReverseArray[i++] = x;
             }
 
-            System.out.printf("Average time for %7d random elements %10s=  %20.3f seconds\n", N,"",getAverageTime(arr));
-            System.out.printf("Average time for %7d half-sorted sorted elements %10s= %20.3f seconds\n", N,"", getAverageTime(halfSortedArray));
-            System.out.printf("Average time for %7d sorted elements %10s= %20.3f seconds\n", N,"", getAverageTime(sortedArray));
-            System.out.printf("Average time for %7d reverse elements% 10s = %20.3f seconds\n", N," ", getAverageTime(primitiveReverseArray));
+            System.out.printf("Average time for %7d random elements %10s=  %20.3f seconds\n", N, "", getAverageTime(arr));
+            System.out.printf("Average time for %7d half-sorted sorted elements %10s= %20.3f seconds\n", N, "", getAverageTime(halfSortedArray));
+            System.out.printf("Average time for %7d sorted elements %10s= %20.3f seconds\n", N, "", getAverageTime(sortedArray));
+            System.out.printf("Average time for %7d reverse elements% 10s = %20.3f seconds\n", N, " ", getAverageTime(primitiveReverseArray));
 
         }
     }
@@ -86,4 +86,5 @@ public class MergeSort extends Sort{
         }
         return (double) result / 1000;
     }
+
 }

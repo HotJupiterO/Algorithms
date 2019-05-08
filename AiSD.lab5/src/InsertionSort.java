@@ -1,6 +1,6 @@
 import java.util.Random;
 
-public class InsertionSort extends Sort{
+public class InsertionSort extends SortingAlgorithm{
     private static void swap(int[] array, int i, int j) {
         int temp = array[i];
         array[i] = array[j];
@@ -43,4 +43,6 @@ public class InsertionSort extends Sort{
         }
         return (double) result / 1000;
     }
+
+
 }

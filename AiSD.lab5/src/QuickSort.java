@@ -8,7 +8,7 @@ import java.util.Random;
  * When implemented well, it can be about two or three times faster than its main competitors,
  * merge sort and heapsort.
  */
-public class QuickSort extends Sort{
+public class QuickSort extends SortingAlgorithm{
     private static void swap(int[] array, int i, int j) {
         int tmp = array[i];
         array[i] = array[j];
@@ -64,4 +64,6 @@ public class QuickSort extends Sort{
         }
         return (double) result / 1000;
     }
+
+
 }
