@@ -74,7 +74,7 @@ public class MergeSort extends SortingAlgorithm {
         }
     }
 
-    private static double getAverageTime(int[] arr) {
+    public static double getAverageTime(int[] arr) {
         int N = 100;
         long startTime, finishTime;
         long result = 0;
@@ -87,4 +87,12 @@ public class MergeSort extends SortingAlgorithm {
         return (double) result / 1000;
     }
 
+    public static double getTimeInSeconds(int[] array) {
+        long startTime, finishTime, result = 0;
+        startTime = System.currentTimeMillis();
+        sort(array, array.length);
+        finishTime = System.currentTimeMillis();
+        result += finishTime - startTime;
+        return (double) result / 1000;
+    }
 }

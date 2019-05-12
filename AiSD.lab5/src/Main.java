@@ -8,21 +8,24 @@ public class Main {
         start();
     }
 
-    public static void start() {
+    private static void start() {
         Scanner sc = new Scanner(System.in);
         String exit = "";
-        System.out.println(exit);
         while (!exit.equals("exit")) {
             int length = lengthChooser();
             int type = typeChooser();
+            int algorithmID = algorithmChooser();
             int[] array = new int[length];
-
-            fillArray(array);
-            transform(array, type);
-            sortViaChoosenAlgorithm(array, algorithmChooser());
+            double time = 0;
+            for (int i = 0; i < 100; i++) {
+                fillArray(array);
+                transform(array, type);
+                time += sortViaChoosenAlgorithm(array, algorithmID);
+            }
+            System.out.printf("-- Average time for choosen algorithm = %1.3f sec --   ", time / 100);
             System.out.println("Type \"exit\" for close the program or any symbols for continue");
-            exit = sc.next();
 
+            exit = sc.next();
         }
 
       /*  System.out.println();
@@ -38,6 +41,10 @@ public class Main {
         System.out.println("1.   100 000.\n2.   500 000.\n3. 1 000 000.\n4. 2 000 000");
         Scanner sc = new Scanner(System.in);
         int option = sc.nextInt();
+        while (option < 1 || option > 4) {
+            System.out.println("Expected value: 1, 2, 3, 4.");
+            option = sc.nextInt();
+        }
         switch (option) {
             case 1 -> {
                 return 100000;
@@ -66,7 +73,6 @@ public class Main {
     private static void transform(int[] array, int type) {
         switch (type) {
             case 1 -> {
-                break;
             }
             case 2 -> Arrays.sort(array, 0, array.length / 2); // half
             case 3 -> Arrays.sort(array); // sorted
@@ -84,7 +90,6 @@ public class Main {
     }
 
     private static void fillArray(int[] array) {
-
         for (int i = 0; i < array.length; i++) {
             Random r = new Random();
             array[i] = r.nextInt(array.length);
@@ -95,16 +100,22 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         System.out.println("Please choose algorithm.");
         System.out.println("1.Insertion Sort.\n2.Merge Sort.\n3.Quick Sort");
-        int mainOption = sc.nextInt();
-        return mainOption;
+        int algorithmID = sc.nextInt();
+        return algorithmID;
     }
 
-    private static void sortViaChoosenAlgorithm(int[] array, int alg) {
-        switch (alg) { // 1.Insertion Sort. 2.Merge Sort. 3.Quick Sort
-            case 1 -> InsertionSort.sort(array);
-            case 2 -> MergeSort.sort(array, array.length);
-            case 3 -> QuickSort.sort(array, 0, array.length - 1);
-            default -> throw new IllegalStateException("Unexpected value: " + alg);
+    private static double sortViaChoosenAlgorithm(int[] array, int alorithmID) {
+        switch (alorithmID) { // 1.Insertion Sort. 2.Merge Sort. 3.Quick Sort
+            case 1 -> {
+                return InsertionSort.getTimeInSeconds(array);//InsertionSort.sort(array);
+            }
+            case 2 -> {
+                return MergeSort.getTimeInSeconds(array);
+            }//MergeSort.sort(array, array.length);
+            case 3 -> {
+                return QuickSort.getTimeInSeconds(array);
+            }//QuickSort.sort(array, 0, array.length - 1);
+            default -> throw new IllegalStateException("Unexpected value: " + alorithmID);
         }
     }
 
