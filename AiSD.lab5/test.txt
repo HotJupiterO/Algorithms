@@ -1,0 +1,8 @@
+for those parameters:
+Algorithm nr 3 sequence length = 1000000 sequence type nr 1 average time = 502.5053
+for those parameters:
+Algorithm nr 3 sequence length = 1000000 sequence type nr 2 average time = 399.7303
+for those parameters:
+Algorithm nr 3 sequence length = 1000000 sequence type nr 3 average time = 342.76869999999997
+for those parameters:
+Algorithm nr 3 sequence length = 1000000 sequence type nr 4 average time = 480.2342

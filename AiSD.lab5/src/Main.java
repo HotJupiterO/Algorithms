@@ -127,14 +127,15 @@ public class Main {
     }
 
     public static void tests() {
+        File file = new File("test.txt");
         String text;
         int numberOfSorts = 10;
         int[] algorithm = {1, 2, 3};
         int[] arrayLength = {100000, 500000, 1000000, 2000000};
         int[] type = {1, 2, 3, 4};
         double result = 0;
-        for (int i = 0; i < algorithm.length; i++) {
-            for (int j = 0; j < arrayLength.length; j++) {
+        for (int i = 2; i < algorithm.length; i++) {
+            for (int j = 3; j < arrayLength.length; j++) {
                 for (int k = 0; k < type.length; k++) {
                     for (int l = 0; l < numberOfSorts; l++) {
                         int[] array = new int[arrayLength[j]];
@@ -148,9 +149,9 @@ public class Main {
                             " sequence length = " + arrayLength[j] +
                             " sequence type nr " + type[k] +
                             " average time = " + result / numberOfSorts;
-                    try (FileWriter fileWriter = new FileWriter("../src/tests.txt", true)) {
+                    try (FileWriter fileWriter = new FileWriter(file, true)) {
                         fileWriter.write(text);
-                        fileWriter.append("/n");
+                        fileWriter.append("\n");
                         fileWriter.flush();
                     } catch (IOException e) {
                         e.printStackTrace();
