@@ -1,3 +1,6 @@
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Random;
@@ -5,18 +8,22 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        start();
+        //start();
+        tests();
     }
 
     private static void start() {
         Scanner sc = new Scanner(System.in);
         String exit = "";
+        int length, type, algorithmID;
+        int[] array;
+        double time;
         while (!exit.equals("exit")) {
-            int length = lengthChooser();
-            int type = typeChooser();
-            int algorithmID = algorithmChooser();
-            int[] array = new int[length];
-            double time = 0;
+            length = lengthChooser();
+            type = typeChooser();
+            algorithmID = algorithmChooser();
+            array = new int[length];
+            time = 0;
             for (int i = 0; i < 100; i++) {
                 fillArray(array);
                 transform(array, type);
@@ -119,6 +126,63 @@ public class Main {
         }
     }
 
+    public static void tests() {
+        String text;
+        int numberOfSorts = 10;
+        int[] algorithm = {1, 2, 3};
+        int[] arrayLength = {100000, 500000, 1000000, 2000000};
+        int[] type = {1, 2, 3, 4};
+        double result = 0;
+        for (int i = 0; i < algorithm.length; i++) {
+            for (int j = 0; j < arrayLength.length; j++) {
+                for (int k = 0; k < type.length; k++) {
+                    for (int l = 0; l < numberOfSorts; l++) {
+                        int[] array = new int[arrayLength[j]];
+                        fillArray(array);
+                        transform(array, type[k]);
+                        result += sort(array, algorithm[i]);
+                    }
+
+                    text = "for those parameters:" +
+                            "\nAlgorithm nr " + algorithm[i] +
+                            " sequence length = " + arrayLength[j] +
+                            " sequence type nr " + type[k] +
+                            " average time = " + result / numberOfSorts;
+                    try (FileWriter fileWriter = new FileWriter("../src/tests.txt", true)) {
+                        fileWriter.write(text);
+                        fileWriter.append("/n");
+                        fileWriter.flush();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                    /*System.out.println("for those parameters:" +
+                            "\nAlgorithm nr " + algorithm[i] +
+                            " sequence length = " + arrayLength[j] +
+                            " sequence type nr " + type[k] +
+                            " average time = " + result / numberOfSorts);*/
+                    System.out.println(text);
+                    result = 0;
+                }
+            }
+        }
+    }
+
+    private static double sort(int[] array, int type) {
+
+        switch (type) {
+            case 1 -> {
+                return QuickSort.getTimeInSeconds(array);
+            }
+            case 2 -> {
+                return MergeSort.getTimeInSeconds(array);
+            }
+            case 3 -> {
+                return InsertionSort.getTimeInSeconds(array);
+            }
+
+            default -> throw new IllegalStateException("Unexpected value: " + type);
+        }
+    }
 
 }
 
