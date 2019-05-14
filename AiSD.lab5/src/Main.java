@@ -34,13 +34,6 @@ public class Main {
 
             exit = sc.next();
         }
-
-      /*  System.out.println();
-        for (int x : array) {
-            System.out.print(x + " ");
-        }*/
-
-
     }
 
     private static int lengthChooser() {
@@ -93,7 +86,6 @@ public class Main {
             }
             default -> throw new IllegalStateException("Unexpected value: " + type);
         }
-
     }
 
     private static void fillArray(int[] array) {
@@ -114,14 +106,14 @@ public class Main {
     private static double sortViaChoosenAlgorithm(int[] array, int alorithmID) {
         switch (alorithmID) { // 1.Insertion Sort. 2.Merge Sort. 3.Quick Sort
             case 1 -> {
-                return InsertionSort.getTimeInSeconds(array);//InsertionSort.sort(array);
+                return InsertionSort.getTimeInSeconds(array);
             }
             case 2 -> {
                 return MergeSort.getTimeInSeconds(array);
-            }//MergeSort.sort(array, array.length);
+            }
             case 3 -> {
                 return QuickSort.getTimeInSeconds(array);
-            }//QuickSort.sort(array, 0, array.length - 1);
+            }
             default -> throw new IllegalStateException("Unexpected value: " + alorithmID);
         }
     }
@@ -134,20 +126,20 @@ public class Main {
         int[] arrayLength = {100000, 500000, 1000000, 2000000};
         int[] type = {1, 2, 3, 4};
         double result = 0;
-        for (int i = 2; i < algorithm.length; i++) {
-            for (int j = 3; j < arrayLength.length; j++) {
-                for (int k = 0; k < type.length; k++) {
+        for (int value : algorithm) {
+            for (int i : arrayLength)
+                for (int item : type) {
                     for (int l = 0; l < numberOfSorts; l++) {
-                        int[] array = new int[arrayLength[j]];
+                        int[] array = new int[i];
                         fillArray(array);
-                        transform(array, type[k]);
-                        result += sort(array, algorithm[i]);
+                        transform(array, item);
+                        result += sort(array, value);
                     }
 
                     text = "for those parameters:" +
-                            "\nAlgorithm nr " + algorithm[i] +
-                            " sequence length = " + arrayLength[j] +
-                            " sequence type nr " + type[k] +
+                            "\nAlgorithm nr " + value +
+                            " sequence length = " + i +
+                            " sequence type nr " + item +
                             " average time = " + result / numberOfSorts;
                     try (FileWriter fileWriter = new FileWriter(file, true)) {
                         fileWriter.write(text);
@@ -156,15 +148,9 @@ public class Main {
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
-                    /*System.out.println("for those parameters:" +
-                            "\nAlgorithm nr " + algorithm[i] +
-                            " sequence length = " + arrayLength[j] +
-                            " sequence type nr " + type[k] +
-                            " average time = " + result / numberOfSorts);*/
                     System.out.println(text);
                     result = 0;
                 }
-            }
         }
     }
 

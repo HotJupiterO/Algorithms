@@ -6,3 +6,53 @@ for those parameters:
 Algorithm nr 3 sequence length = 1000000 sequence type nr 3 average time = 342.76869999999997
 for those parameters:
 Algorithm nr 3 sequence length = 1000000 sequence type nr 4 average time = 480.2342
+for those parameters:
+Algorithm nr 3 sequence length = 2000000 sequence type nr 1 average time = 2019.682
+for those parameters:
+Algorithm nr 1 sequence length = 100000 sequence type nr 1 average time = 0.019
+for those parameters:
+Algorithm nr 1 sequence length = 100000 sequence type nr 2 average time = 0.051500000000000004
+for those parameters:
+Algorithm nr 1 sequence length = 100000 sequence type nr 3 average time = 0.005
+for those parameters:
+Algorithm nr 1 sequence length = 100000 sequence type nr 4 average time = 0.0049
+for those parameters:
+Algorithm nr 1 sequence length = 500000 sequence type nr 1 average time = 0.08219999999999998
+for those parameters:
+Algorithm nr 1 sequence length = 500000 sequence type nr 2 average time = 0.139
+for those parameters:
+Algorithm nr 1 sequence length = 500000 sequence type nr 3 average time = 0.018699999999999998
+for those parameters:
+Algorithm nr 1 sequence length = 500000 sequence type nr 4 average time = 0.0187
+for those parameters:
+Algorithm nr 1 sequence length = 1000000 sequence type nr 1 average time = 0.2706
+for those parameters:
+Algorithm nr 1 sequence length = 1000000 sequence type nr 2 average time = 0.24000000000000005
+for those parameters:
+Algorithm nr 1 sequence length = 1000000 sequence type nr 3 average time = 0.0487
+for those parameters:
+Algorithm nr 1 sequence length = 1000000 sequence type nr 4 average time = 0.04659999999999999
+for those parameters:
+Algorithm nr 1 sequence length = 2000000 sequence type nr 1 average time = 0.3216
+for those parameters:
+Algorithm nr 1 sequence length = 2000000 sequence type nr 2 average time = 0.7001
+for those parameters:
+Algorithm nr 1 sequence length = 2000000 sequence type nr 3 average time = 0.0769
+for those parameters:
+Algorithm nr 1 sequence length = 2000000 sequence type nr 4 average time = 0.1089
+for those parameters:
+Algorithm nr 2 sequence length = 100000 sequence type nr 1 average time = 0.04620000000000001
+for those parameters:
+Algorithm nr 2 sequence length = 100000 sequence type nr 2 average time = 0.013000000000000001
+for those parameters:
+Algorithm nr 2 sequence length = 100000 sequence type nr 3 average time = 0.0070999999999999995
+for those parameters:
+Algorithm nr 2 sequence length = 100000 sequence type nr 4 average time = 0.0082
+for those parameters:
+Algorithm nr 2 sequence length = 500000 sequence type nr 1 average time = 0.09999999999999999
+for those parameters:
+Algorithm nr 2 sequence length = 500000 sequence type nr 2 average time = 0.076
+for those parameters:
+Algorithm nr 2 sequence length = 500000 sequence type nr 3 average time = 0.0414
+for those parameters:
+Algorithm nr 2 sequence length = 500000 sequence type nr 4 average time = 0.08559999999999998
