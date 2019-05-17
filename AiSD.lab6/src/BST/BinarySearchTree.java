@@ -1,12 +1,14 @@
-import java.util.Scanner;
+package BST;
 
-public class BinarySearchTree {
+import org.jetbrains.annotations.NotNull;
+
+public class BinarySearchTree implements Element {
     Node root;
     BinarySearchTree() {
         root = null;
     }
 
-    private class Node {
+    class Node {
         int value;
         Node left, right;
         Node(int value) {
@@ -14,6 +16,11 @@ public class BinarySearchTree {
             left = null;
             right = null;
         }
+    }
+
+    @Override
+    public void accept(Visitor visitor) {
+        visitor.visit(this);
     }
 
     public void insert(int value) {
@@ -90,6 +97,7 @@ public class BinarySearchTree {
         return minValue(root);
     }
 
+    /*
     private void printPreorder(Node node) {
         if (node == null) return;
         System.out.print(node.value + " ");
@@ -134,8 +142,9 @@ public class BinarySearchTree {
             printPostorder();
         }
     }
+*/
 
-    public int getValue(Node node) {
+     int getValue(Node node) {
         return node.value;
     }
 

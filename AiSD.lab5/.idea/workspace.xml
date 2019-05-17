@@ -2,22 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d252577b-6f09-4195-b944-fa68fa08f32b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../AiSD.lab6/AiSD.lab6.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../AiSD.lab6/src/BinarySearchTree.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../AiSD.lab6/src/BinarySearchTreeTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../AiSD.lab6/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AiSD.lab5/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AiSD.lab5/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/test.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/MaxNonoverlappingSegments.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/MedianSearch.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/MedianSearchTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/NumberSolitaire.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/TieRopes.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/test.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/tests.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AiSD.lab6/out/production/AiSD.lab6/BinarySearchTree$Node.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AiSD.lab6/out/production/AiSD.lab6/BinarySearchTree$Node.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AiSD.lab6/out/production/AiSD.lab6/BinarySearchTree.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AiSD.lab6/out/production/AiSD.lab6/BinarySearchTree.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,11 +21,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="84" column="17" lean-forward="true" selection-start-line="84" selection-start-column="17" selection-end-line="84" selection-end-column="17" />
+            <state relative-caret-position="3834">
+              <caret line="148" column="44" lean-forward="true" selection-start-line="148" selection-start-column="44" selection-end-line="148" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -55,10 +42,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/QuickSort.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="891">
+            <state relative-caret-position="1701">
               <caret line="63" column="9" selection-start-line="63" selection-start-column="9" selection-end-line="63" selection-end-column="9" />
             </state>
           </provider>
@@ -257,7 +244,7 @@
       <workItem from="1557742340126" duration="2933000" />
       <workItem from="1557768804770" duration="1148000" />
       <workItem from="1557779056406" duration="3432000" />
-      <workItem from="1557829628110" duration="2483000" />
+      <workItem from="1557829628110" duration="3662000" />
     </task>
     <servers />
   </component>
@@ -279,7 +266,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68078000" />
+    <option name="totallyTimeSpent" value="69257000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -293,8 +280,8 @@
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.48653847" visible="true" weight="0.15436241" />
-      <window_info active="true" id="Structure" order="1" sideWeight="0.51346153" side_tool="true" visible="true" weight="0.15436241" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4867647" visible="true" weight="0.15436241" />
+      <window_info id="Structure" order="1" sideWeight="0.5132353" side_tool="true" visible="true" weight="0.15436241" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Capture Tool" order="4" />
@@ -302,7 +289,7 @@
       <window_info id="Favorites" order="6" sideWeight="0.5048356" side_tool="true" weight="0.14630872" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4986577" visible="true" weight="0.23529412" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4986577" weight="0.23529412" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.6132597" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -405,20 +392,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/QuickSort.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="84" column="17" lean-forward="true" selection-start-line="84" selection-start-column="17" selection-end-line="84" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="1701">
+          <caret line="63" column="9" selection-start-line="63" selection-start-column="9" selection-end-line="63" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/QuickSort.java">
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="891">
-          <caret line="63" column="9" selection-start-line="63" selection-start-column="9" selection-end-line="63" selection-end-column="9" />
+        <state relative-caret-position="3834">
+          <caret line="148" column="44" lean-forward="true" selection-start-line="148" selection-start-column="44" selection-end-line="148" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
