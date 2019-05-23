@@ -45,4 +45,14 @@ class BinarySearchTreeTest {
     void maxValueTest() {
         assertEquals(12, bst.maxValue());
     }
+
+    @Test
+    void upperTest() {
+        assertEquals(5, bst.upper(3));
+    }
+
+    @Test
+    void lowerTest(){
+        assertEquals(10, bst.lower(12));
+    }
 }

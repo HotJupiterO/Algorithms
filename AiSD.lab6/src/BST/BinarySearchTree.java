@@ -1,9 +1,8 @@
 package BST;
 
-import org.jetbrains.annotations.NotNull;
-
 public class BinarySearchTree implements Element {
     Node root;
+
     BinarySearchTree() {
         root = null;
     }
@@ -11,10 +10,13 @@ public class BinarySearchTree implements Element {
     class Node {
         int value;
         Node left, right;
+        private Node parentHelper;
+
         Node(int value) {
             this.value = value;
             left = null;
             right = null;
+            parentHelper = this;
         }
     }
 
@@ -53,24 +55,24 @@ public class BinarySearchTree implements Element {
     }
 
     public void delete(int value) {
-        _delete(root, value);
+        Node deletedNode = delete(root, value);
     }
 
-    private Node _delete(Node root, int value) {
-        if (root == null) return root;
+    private Node delete(Node node, int value) {
+        if (node == null) return node;
 
-        if (value < root.value) {
-            root.left = _delete(root.left, value);
-        } else if (value > root.value) {
-            root.right = _delete(root.right, value);
+        if (value < node.value) {
+            node.left = delete(node.left, value);
+        } else if (value > node.value) {
+            node.right = delete(node.right, value);
         } else {
-            if (root.left == null) {
-                return root.right;
-            } else if (root.right == null) return root.left;
-            root.value = minValue(root.right);
-            root.right = _delete(root.right, root.value);
+            if (node.left == null) {
+                return node.right;
+            } else if (node.right == null) return node.left;
+            node.value = minValue(node.right);
+            node.right = delete(node.right, node.value);
         }
-        return root;
+        return node;
     }
 
     private int minValue(Node root) {
@@ -90,13 +92,92 @@ public class BinarySearchTree implements Element {
         }
         return maxValue;
     }
+
     public int maxValue() {
         return maxValue(root);
     }
+
     public int minValue() {
         return minValue(root);
     }
 
+    private Node search(Node root, int key) {
+
+        if (root == null || root.value == key) {
+            return root;
+        }
+
+        if (root.value > key) {
+            root.left.parentHelper = root;
+            return search(root.left, key);
+        } else {
+            root.right.parentHelper = root;
+            return search(root.right, key);
+        }
+
+    }
+
+    public int upper(int value) {
+        Node current;
+        if ((current = search(this.root, value)) == null && current.parentHelper.value < value) {
+            return Integer.MIN_VALUE;
+        } else if (current.parentHelper.value > value) return current.parentHelper.value;
+        if ((current.right) == null) {
+            return current.parentHelper.value;
+        }
+        current = current.right;
+        if (current.left == null) return current.value;
+        while (current.left != null) {
+            current = current.left;
+        }
+        return current.value;
+    }
+
+    public int lower(int value) {
+        Node current;
+        current = search(this.root, value);
+        if (value < this.root.value) {
+            if (current.parentHelper.value > value
+                    && current.left == null) {
+                return current.value;
+            } else if (current.parentHelper.value < value) return current.parentHelper.value;
+            current = current.left;
+            if (current.right == null) return current.value;
+            while (current.right != null) {
+                current = current.right;
+            }
+            return current.value;
+        } else {
+            if (current.parentHelper.value > value
+                    && current.left == null) {
+                return this.root.value;
+            } else if (current.parentHelper.value < value) return current.parentHelper.value;
+            current = current.left;
+            if (current.right == null) return current.value;
+            while (current.right != null) {
+                current = current.right;
+            }
+            return current.value;
+        }
+
+
+    }
+
+    /*public Node get2ndLargestNode() {
+        return get2ndLargestNode(root, root);
+    }
+
+    private Node get2ndLargestNode(Node current, Node prev) {
+        if (current == null) {
+            return null;
+        }
+
+        if (current.right == null) {
+            return prev;
+        }
+
+        return get2ndLargestNode(current.right, current);
+    }*/
     /*
     private void printPreorder(Node node) {
         if (node == null) return;
@@ -144,7 +225,7 @@ public class BinarySearchTree implements Element {
     }
 */
 
-     int getValue(Node node) {
+    int getValue(Node node) {
         return node.value;
     }
 
