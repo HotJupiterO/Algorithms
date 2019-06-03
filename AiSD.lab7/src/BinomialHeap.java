@@ -193,11 +193,12 @@ public class BinomialHeap {
         System.out.println("\n");
     }
 
-    private void displayHeap(Node r) {
-        if (r != null) {
-            displayHeap(r.child);
-            System.out.print(r.key + " ");
-            displayHeap(r.sibling);
+    // inorder traversals
+    private void displayHeap(Node node) {
+        if (node != null) {
+            displayHeap(node.child);
+            System.out.print(node.key + " ");
+            displayHeap(node.sibling);
         }
     }
 
