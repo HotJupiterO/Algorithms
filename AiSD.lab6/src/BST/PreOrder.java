@@ -6,7 +6,7 @@ public class PreOrder implements Visitor {
         printPreorder(bst.root);
     }
 
-    void printPreorder(BinarySearchTree.Node node) {
+    private void printPreorder(BinarySearchTree.Node node) {
         if (node == null) return;
         System.out.print(node.value + " ");
         printPreorder(node.left);

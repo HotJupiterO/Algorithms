@@ -6,7 +6,7 @@ public class InOrder implements Visitor {
         printInorder(bst.root);
     }
 
-     void printInorder(BinarySearchTree.Node node) {
+    private void printInorder(BinarySearchTree.Node node) {
         if (node == null)
             return;
         printInorder(node.left);
