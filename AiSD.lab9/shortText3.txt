@@ -1,0 +1,31 @@
+Forest
+A forest is an undirected graph in which any two vertices are connected by at most one path. Equivalently, a forest is an undirected acyclic graph. Equivalently, a forest is an undirected graph, all of whose connected components are trees; in other words, the graph consists of a disjoint union of trees. As special cases, the order-zero graph (a forest consisting of zero trees), a single tree, and edgeless graph, are examples of forests. Since for every tree V - E = 1, we can easily count the number of trees that are within a forest by subtracting the difference between total vertices and total edges. TV - TE = number of trees in a forest.
+
+Polytree
+Main article: Polytree
+A polytree[3] (or directed tree[4] or oriented tree[19][6] or singly connected network[7]) is a directed acyclic graph (DAG) whose underlying undirected graph is a tree. In other words, if we replace its directed edges with undirected edges, we obtain an undirected graph that is both connected and acyclic.
+
+Some authors restrict the phrase "directed tree" to the case where the edges are all directed towards a particular vertex, or all directed away from a particular vertex (see arborescence).
+
+Polyforest
+A polyforest (or directed forest or oriented forest) is a directed acyclic graph whose underlying undirected graph is a forest. In other words, if we replace its directed edges with undirected edges, we obtain an undirected graph that is acyclic.
+
+Some authors restrict the phrase "directed forest" to the case where the edges of each connected component are all directed towards a particular vertex, or all directed away from a particular vertex (see branching).
+
+Rooted tree
+A rooted tree is a tree in which one vertex has been designated the root.[20] The edges of a rooted tree can be assigned a natural orientation, either away from or towards the root, in which case the structure becomes a directed rooted tree. When a directed rooted tree has an orientation away from the root, it is called an arborescence[4] or out-tree[11]; when it has an orientation towards the root, it is called an anti-arborescence or in-tree[11]. The tree-order is the partial ordering on the vertices of a tree with u < v if and only if the unique path from the root to v passes through u. A rooted tree which is a subgraph of some graph G is a normal tree if the ends of every edge in G are comparable in this tree-order whenever those ends are vertices of the tree (Diestel 2005, p. 15). Rooted trees, often with additional structure such as ordering of the neighbors at each vertex, are a key data structure in computer science; see tree data structure.
+
+In a context where trees are supposed to have a root, a tree without any designated root is called a free tree.
+
+A labeled tree is a tree in which each vertex is given a unique label. The vertices of a labeled tree on n vertices are typically given the labels 1, 2, …, n. A recursive tree is a labeled rooted tree where the vertex labels respect the tree order (i.e., if u < v for two vertices u and v, then the label of u is smaller than the label of v).
+
+In a rooted tree, the parent of a vertex v is the vertex connected to v on the path to the root; every vertex has a unique parent except the root which has no parent.[20] A child of a vertex v is a vertex of which v is the parent.[20] An ascendant of a vertex v is any vertex which is either the parent of v or is (recursively) the ascendant of the parent of v. A descendant of a vertex v is any vertex which is either the child of v or is (recursively) the descendant of any of the children of v. A sibling to a vertex v is any other vertex on the tree which has the same parent as v.[20] A leaf is a vertex with no children.[20] An internal vertex is a vertex that is not a leaf.[20]
+
+The height of a vertex in a rooted tree is the length of the longest downward path to a leaf from that vertex. The height of the tree is the height of the root. The depth of a vertex is the length of the path to its root (root path). This is commonly needed in the manipulation of the various self-balancing trees, AVL trees in particular. The root has depth zero, leaves have height zero, and a tree with only a single vertex (hence both a root and leaf) has depth and height zero. Conventionally, an empty tree (tree with no vertices, if such are allowed) has depth and height −1.
+
+A k-ary tree is a rooted tree in which each vertex has at most k children.[21] 2-ary trees are often called binary trees, while 3-ary trees are sometimes called ternary trees.
+
+Ordered tree
+An ordered tree (or plane tree) is a rooted tree in which an ordering is specified for the children of each vertex.[20][22] This is called a "plane tree" because an ordering of the children is equivalent to an embedding of the tree in the plane, with the root at the top and the children of each vertex lower than that vertex. Given an embedding of a rooted tree in the plane, if one fixes a direction of children, say left to right, then an embedding gives an ordering of the children. Conversely, given an ordered tree, and conventionally drawing the root at the top, then the child vertices in an ordered tree can be drawn left-to-right, yielding an essentially unique planar embedding .
+
+Properties
