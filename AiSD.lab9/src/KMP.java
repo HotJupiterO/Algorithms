@@ -39,20 +39,4 @@ public class KMP {
 
         return -1;  // Not found
     }
-
-    /*public int[] kmp(String soughtText, String inText) {
-        int sl = soughtText.length();
-        int tl = inText.length();
-        int[] answer = new int[tl];
-        int[] p = prefixFunction(soughtText + "#" + inText);
-        int count = 0;
-        for (int i = 0; i < tl - 1; i++) {
-            if (p[sl + i + 1] == sl) {
-                answer[count++] = i;
-            }
-        }
-        return answer;
-    }*/
-
-
 }
