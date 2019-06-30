@@ -1,1 +1,4 @@
 .idea/
+AiSD_labs/*.idea/
+AiSD_labs/*.out/
+AiSD_labs/*.iml
